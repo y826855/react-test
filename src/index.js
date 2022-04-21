@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <App />
-  </React.StrictMode>
+  //</React.StrictMode>
+  //stric모드는 개발 과정 중에만 적용되고, 배포시에 자동으로 풀림.
+  //안정성을 위해 사용하지만 꺼도 크게 상관은 없음
+  //위의 stricMode가 켜져있으면 doubleInvoke가 발생함.
+  //double Invoke란 useState, useMemo, useEffect 등의 함수들이 두번 실행되는 현상
+  //
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
