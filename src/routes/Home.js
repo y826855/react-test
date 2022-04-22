@@ -33,8 +33,8 @@ function Home()
               id={item.id}
               coverImg={item.medium_cover_image}
               title={item.title}
-              summary={item.summary}
               genres={item.genres}
+              summary={item.summary}
             />)
           }</div>
         }</div>
