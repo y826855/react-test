@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 //Link는 경로 이동시 새로고침을 하지 않음.
 //a href는 경로 이동시 새로고침 함.
 
+//function Movie({id, coverImg, title, summary, genres})
 function Movie({id, coverImg, title, summary, genres})
 {
 
@@ -13,7 +14,7 @@ function Movie({id, coverImg, title, summary, genres})
     <h2>
       <Link to={`/movie/${id}`}>{title}</Link>
     </h2>
-    <p>{summary}</p>
+    <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
       <ul>
         {genres.map(g => <li key={g}>{g}</li>)}
       </ul>
